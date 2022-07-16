@@ -1,0 +1,505 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*?============================================================== সি এস এস রিসেট Css Reset */
+:root {
+  --primary-font: "Poppins", sans-serif;
+
+  --fz-12: 13px;
+  --fz-14: 14px;
+  --fz-18: 18px;
+  --fz-30: 30px;
+  --fz-36: 36px;
+  --fz-60: 60px;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --color-primary: #222222;
+  --color-hover: #8490ff;
+  --color-heading: #777777;
+
+  --bg-pri-transparent: rgba(0, 0, 0, 0.8);
+  --bg-sec-transparent: rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 991px) {
+  :root {
+    --fz-12: 12px;
+  }
+}
+body {
+  font-family: var(--primary-font);
+}
+/*?  ============================================================ ইউটিলিটি ক্লাস/ utility Classes*/
+.text-primary-400 {
+  color: var(--color-primary);
+}
+.text-hover-400 {
+  color: var(--color-hover);
+}
+.text-heading-400 {
+  color: var(--color-heading);
+}
+.bg-btn-color {
+  background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+}
+.text-12 {
+  font-size: var(--fz-12);
+}
+.text-14 {
+  font-size: var(--fz-14);
+}
+.text-18 {
+  font-size: var(--fz-18);
+}
+.text-30 {
+  font-size: var(--fz-30);
+}
+@media screen and (min-width: 992px) {
+  .text-30 {
+    font-size: var(--fz-60);
+  }
+}
+.text-36 {
+  font-size: var(--fz-36);
+}
+.text-60 {
+  font-size: var(--fz-60);
+}
+
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+.fw-500 {
+  font-weight: var(--fw-500);
+}
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+.fw-900 {
+  font-weight: var(--fw-900);
+}
+/*! =============================================== Common Classes */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+[class*="col-"] {
+  width: 100%;
+  padding: 0 15px;
+  /* height: 300px; */
+  /* border: 3px solid red; */
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .col-sm-1 {
+    width: 8.33%;
+  }
+  .col-sm-2 {
+    width: 16.66%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33%;
+  }
+  .col-sm-5 {
+    width: 41.66%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33%;
+  }
+  .col-sm-8 {
+    width: 66.66%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.33%;
+  }
+  .col-sm-11 {
+    width: 91.66%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.33%;
+  }
+  .col-md-11 {
+    width: 91.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.d-flex {
+  display: flex;
+}
+.d-ib {
+  display: inline-block;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.justify-end {
+  justify-content: end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.py-20 {
+  padding: 20px 0;
+}
+.px-30 {
+  padding: 0 30px;
+}
+.align__self-center {
+  align-self: center;
+}
+.align__self-end {
+  align-self: flex-end;
+}
+/*? ====== ==================================== */
+header {
+  background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.2);
+}
+
+header span {
+  height: 30px;
+  width: 30px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  /* display: block; */
+}
+header span i:nth-child(2) {
+  color: rgba(255, 255, 255, 0.7);
+}
+header span i:nth-child(2):hover {
+  color: rgba(255, 255, 255, 1);
+}
+@media screen and (min-width: 992px) {
+  header span {
+    display: none;
+  }
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+
+.heading__nav {
+  background-color: var(--bg-pri-transparent);
+  width: 246px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.4s;
+}
+
+.heading__nav li a {
+  display: block;
+  padding: 15px 20px;
+  width: 100%;
+  color: #fff;
+  transition: color 0.3s;
+}
+.heading__nav li a:hover {
+  color: var(--color-hover);
+}
+.show {
+  width: 246px;
+}
+.overlay {
+  background-color: var(--bg-sec-transparent);
+}
+@media screen and (min-width: 992px) {
+  .heading__nav {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    position: static;
+  }
+  .heading__nav li {
+    display: inline-block;
+  }
+  .heading__nav li a {
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0 20px;
+  }
+  .show {
+    width: auto;
+  }
+  .overlay {
+    background-color: inherit;
+  }
+}
+/* ? Start Banner area */
+.banner {
+  background-color: #f9f9ff;
+}
+
+.full__screen {
+  height: auto;
+}
+.left__banner {
+  margin-top: 100px;
+}
+@media screen and (min-width: 768px) {
+  .left__banner {
+    margin-top: 0;
+  }
+  .full__screen {
+    height: 768px;
+  }
+}
+.left__banner h6 {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.left__banner h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+.left__banner p {
+  margin-bottom: 16px;
+}
+.left__banner a {
+  color: #fff;
+  line-height: 42px;
+  transition: 0.3s;
+}
+.left__banner a:hover {
+  box-shadow: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+.right__banner {
+  width: 70%;
+}
+@media screen and (min-width: 768px) {
+  .right__banner {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .right__banner {
+    align-self: flex-end !important;
+  }
+}
+/* ? ================================home Section */
+.pt-120 {
+  padding-top: 120px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.right__home a {
+  line-height: 42px;
+  color: white;
+  transition: 0.3s;
+}
+.right__home a:hover {
+  box-shadow: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+/* ===============start  */
