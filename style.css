@@ -170,7 +170,7 @@ body {
 }
 /*! =============================================== Common Classes */
 .container {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -549,4 +549,28 @@ header span i:nth-child(2):hover {
 }
 .text-center {
   text-align: center;
+}
+/* Section Face */
+.fact-area {
+  padding: 120px 0;
+  background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+  text-align: center;
+}
+.single-fact {
+  margin-bottom: 30px;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .single-fact {
+    margin-bottom: 0;
+  }
+}
+.single-fact h2 {
+  font-size: 36px;
+  line-height: 1.2em;
+}
+.single-fact p {
+  margin-bottom: 1rem;
+  line-height: 1.625em;
+  font-size: 14px;
 }
